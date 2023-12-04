@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'com.software'
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.software"
         minSdk 24
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
@@ -29,6 +29,15 @@ android {
 }
 
 dependencies {
+
+    //实现乐曲卡片布局依赖
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //实现乐器图片横向布局的RecyclerView依赖
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //实现轮播图的Banner依赖
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    //Glide 是一个快速高效的 Android 图片加载库
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'

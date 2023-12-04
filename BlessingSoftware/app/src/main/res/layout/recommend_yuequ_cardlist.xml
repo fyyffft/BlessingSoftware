@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5DEB3">
+
+    <androidx.cardview.widget.CardView
+        android:background="#F5DEB3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_yueQu"
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+
+            android:scaleType="centerCrop"
+            android:src="@mipmap/a1" />
+
+        <TextView
+            android:id="@+id/tv_yueQu_name"
+            android:background="#F5DEB3"
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="150dp"
+            android:gravity="center"
+            android:text="百鸟朝凤"
+            android:textColor="#696969"
+            android:textSize="15dp" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

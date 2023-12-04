@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="#F5DEB3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    用到的颜色  #FFEFD5蕃木瓜色  #F5DEB3小麦色 #696969昏灰色-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+    <!--    轮播图布局-->
+        <com.youth.banner.Banner
+            android:background="#F5DEB3"
+            android:id="@+id/main_banner"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:banner_radius="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:banner_loop_time="2000"
+            />
+    <!--乐器列表(横向滑动)-->
+        <RelativeLayout
+
+            android:id="@+id/yeuQi_relative"
+            android:layout_below="@+id/main_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv_yueQi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="乐器"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:gravity="center"/>
+    <!--        androidx.recyclerview.widget.RecyclerView-->
+            <com.software.RecommendPage.FixRecyclerView
+                android:id="@+id/yueQi_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_yueQi" />
+        </RelativeLayout>
+
+    <!--    乐曲列表(纵向滑动，卡片布局)-->
+
+        <RelativeLayout
+
+            android:layout_below="@+id/yeuQi_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv_yueQu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="乐曲"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:gravity="center"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/yueQu_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_yueQu" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
